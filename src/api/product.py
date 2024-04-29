@@ -8,7 +8,7 @@ routes_product = Blueprint("routes_product", __name__)
 
 
 @routes_product.route('/mostrarproductos', methods=['GET'])
-def mostrar_producto():
+def mostrar_product():
 
     productos = product.query.all()
 

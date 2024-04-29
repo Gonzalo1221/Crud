@@ -26,9 +26,10 @@
                     <input type="number" class="form-control" id="telefono" placeholder="Dig. tu Telefono">
                 </div>
                 <select id="producto" class="form-select form-control" aria-label="Default select example" aria-placeholder="selecciona tu producto">
-                  <option selected>Selecciona un Producto</option>
+                  <option value="0" selected>Selecciona un Producto</option>
                 </select>
-                <a type="submit" class="btn btn-primary" onclick="guardar()">Guardar</a>
+                <button type="guardar" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                <a style="display: none;" id="cancelarBtn" type="cancelar" class="btn btn-danger" >Cancelar</a>
             </form>
         </div>
     </div>
@@ -45,18 +46,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>barrios</td>
-            <td>12345</td>
-            <td>ejemplo</td>
-            <td>
-              <button class="btn btn-primary btn-sm">Actualizar</button>
-              <button class="btn btn-danger btn-sm">Eliminar</button>
-            </td>
-          </tr>
         </tbody>
+        
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
