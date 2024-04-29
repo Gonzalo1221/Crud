@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, session, render_template, request, jsonify
+from flask import Flask, Blueprint,  redirect, request, jsonify, json, session, render_template
 from flask_sqlalchemy import SQLAlchemy
 from model.product import product
 
@@ -7,7 +7,7 @@ routes_product = Blueprint("routes_product", __name__)
 
 
 
-@routes_product.route('/mostrar', methods=['GET'])
+@routes_product.route('/mostrarproductos', methods=['GET'])
 def mostrar_producto():
 
     productos = product.query.all()

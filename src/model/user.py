@@ -6,13 +6,18 @@ class user(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     lastname = db.Column(db.String(50))
-    producto = db.Column(db.Integer,db.ForeignKey("tblproduct.id"))
+    phone = db.Column(db.String(50))
+    product = db.Column(db.Integer,db.ForeignKey("tblproduct.id"))
 
 
-    def __init__(self, name, lastname, message):
+    def __init__(self, name, lastname,phone , product):
         self.name = name
         self.lastname = lastname
-        self.message = message
+        self.phone = phone
+        self.product = product
 
 with app.app_context():
-    db.create_all() 
+    db.create_all()
+class userSchema(ma.Schema):
+        class Meta:
+            fields = ('id', 'name', 'lastname','phone' ,'product')

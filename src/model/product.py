@@ -24,3 +24,7 @@ def create_producto():
 with app.app_context():
     db.create_all() 
     create_producto()
+    
+class productSchema(ma.Schema):
+        class Meta:
+            fields = ('id','name')
