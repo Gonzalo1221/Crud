@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": ".",
+      "src": ".",  // Incluye todo el directorio actual
       "use": "@vercel/python"
     }
   ],
@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ]
+  ],
+  "env": {
+    "FLASK_ENV": "production"
+  }
 }
