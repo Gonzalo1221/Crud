@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": ".",  // Incluye todo el directorio actual
+      "src": ".",
       "use": "@vercel/python"
     }
   ],
