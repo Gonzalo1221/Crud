@@ -1,6 +1,5 @@
 #https://docs.sqlalchemy.org/en/14/core/type_basics.html
 #https://flask.palletsprojects.com/en/2.2.x/
-#probando visual en el navegador
 
 from flask import Flask ,session, render_template
 from config.db import db, app, ma
