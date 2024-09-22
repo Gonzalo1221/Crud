@@ -16,6 +16,8 @@ COPY requirements.txt .
 
 # Actualiza pip a la última versión
 RUN pip install --upgrade pip
+RUN apt-get update && apt-get install -y build-essential
+pip install greenlet --only-binary=:all:
 
 # Instala las dependencias de la aplicación desde el requirements.txt
 RUN pip install --disable-pip-version-check --upgrade -r requirements.txt
