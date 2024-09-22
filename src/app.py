@@ -5,13 +5,13 @@ from flask import Flask ,session, render_template
 from config.db import db, app, ma
 
 #importar los model en orden
-from model.product import product
-from model.user import user
+#from model.product import product
+#from model.user import user
 
 
 # importacion de los api
-from api.user import routes_user
-from api.product import routes_product
+#from api.user import routes_user
+#from api.product import routes_product
 
 
 app.register_blueprint(routes_user, url_prefix="/api")
